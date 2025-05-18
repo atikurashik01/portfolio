@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="thankyou" style="display:none; color:#43cea2; font-weight:bold; margin-top:1rem;">Thank you for reaching out!</div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <strong>Address:</strong> 123 Main Street, Dhaka, Bangladesh
+      </div>
+      <div>
+        <strong>Email:</strong> <a href="mailto:ashik@email.com">ashik@email.com</a>
+      </div>
+      <div>
+        <a href="#" class="footer-link">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2024 Ashik Rahman. All rights reserved.</div>
+  </footer>
+  <script>
+    // Simple thank you message on submit
+    document.querySelector('form').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('thankyou').style.display = 'block';
+      setTimeout(() => { document.getElementById('thankyou').style.display = 'none'; }, 3000);
+      this.reset();
+    };
+  </script>
+</body>
+</html> 
